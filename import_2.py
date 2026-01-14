@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import csv
 
 # Load immune GO pairs
@@ -26,4 +28,5 @@ with open("Immune_longest_isoforms_per_GO.tsv", "w", newline='') as f_out:
         if fbgn in isoforms:
             row = isoforms[fbgn].copy()
             row["Immune_GO_terms"] = go_term
+
             writer.writerow(row)
